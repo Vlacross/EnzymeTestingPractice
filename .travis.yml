@@ -2,6 +2,13 @@ language: node_js
 node_js: node
 cache:
   directories:
-    - node_modules
-env: 
-  - CI=true
+  - node_modules
+env:
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: eVMhEv5qdyxdBBE6+bUeXfW+CSBg5sT7LtIosOo5LTUVMHcyMXkLwcfDkEgIvipA124FHTQ7Yw1pFXfghH3rZ4fn2vMUCpacWrChSdXM5OElr0j74ZQdfiLp8n7wmvVzyXCHixYlU6NBlHmTq856WCWHIopxZDlytjbd0oAjSsiTg8lrNSszNW536aOI1ktw0HXYxvnrfzskL9rUMC97+BcQMb342JJVjzGg+PAQ65qgeglXCIgkSm4MPSP3QrRkMpAv2nHMjlOKfUgetu/LD/9tbr3sPidMnInw6nbxfxbOpNVc9Dq85K5sH3fl2AVXwecIQK9pWlEsrpcVmfqi36BUZAYfJ7f31drEGp0PFYpNTilf3BoSjCcuGp8DSXnQRGVjLAXVLdAQjlVNVSyONhDDDvLca9sivtnZZwJxHbNjuwkjmVcHIPTe62LUuIMHoFkYrIDRISsQFXJKNVRv3QEKNPM5zr9xUbN1DoungW7b0Ve5RNPlcl8zbqSZodnc//OeX29rALAmeVYTH0UePYexOu+vwo29ZzF/UsTnU4rRAtALjnXQdwqnfbB76enDQwb3UFdOizATw0OEd4FFWJujGGkBp/a9mbADF4z64cJu6Yzldel0xtauxFa9fo4qdyaq3+b9EDc4uP9mt0bKssTpn/yNnKxfGr/8elM/vlY=
+  app: fierce-headland-30377
+  on:
+    repo: Vlacross/EnzymeTestingPractice

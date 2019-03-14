@@ -13,21 +13,24 @@ describe('<TopNav />', () => {
     expect(wrapper).toBeDefined()
   });
 
-  it('renders without crashing', () => {
+  it('renders with 3 child elements', () => {
     const wrapper = shallow(<TopNav />);
     expect(wrapper.find('ul').children()).toHaveLength(3)
   });
 
-  it('renders without crashing', () => {
-    const click = jest.fn()
-    const wrapper = mount(<TopNav onGenerateAuralUpdate={click} />);
-    // wrapper.find('.visuallyhidden')
-    // console.log(wrapper.prop('onGenerateAuralUpdate'))
+  it('element prop click triggers component prop callback', () => {
+    const callBack = jest.fn()
+    const wrapper = mount(<TopNav onGenerateAuralUpdate={callBack} />);
     wrapper.find('a.visuallyhidden').simulate('click')
-    // wrapper.find('').simulate('click')
-   expect(click).toHaveBeenCalled()
+   expect(callBack).toHaveBeenCalled()
   });
 
+  it('element prop click triggers component prop callback', () => {
+    const callBack = jest.fn()
+    const wrapper = mount(<TopNav onRestartGame={callBack} />);
+    wrapper.find('a.new').simulate('click')
+   expect(callBack).toHaveBeenCalled()
+  });
 
 
 

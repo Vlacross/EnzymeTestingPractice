@@ -20,14 +20,14 @@ describe('<TopNav />', () => {
 
   it('element prop click triggers component prop callback', () => {
     const callBack = jest.fn()
-    const wrapper = mount(<TopNav onGenerateAuralUpdate={callBack} />);
+    const wrapper = shallow(<TopNav onGenerateAuralUpdate={callBack} />);
     wrapper.find('a.visuallyhidden').simulate('click')
    expect(callBack).toHaveBeenCalled()
   });
 
   it('element prop click triggers component prop callback', () => {
     const callBack = jest.fn()
-    const wrapper = mount(<TopNav onRestartGame={callBack} />);
+    const wrapper = shallow(<TopNav onRestartGame={callBack} />);
     wrapper.find('a.new').simulate('click')
    expect(callBack).toHaveBeenCalled()
   });

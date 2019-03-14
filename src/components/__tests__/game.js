@@ -90,8 +90,6 @@ describe('<Game />', () => {
   wrapper.setState({
     guesses: newGuesses
   });
-
-  console.log(wrapper.state())
   expect(wrapper.find('StatusSection').prop('guesses')).toEqual(newGuesses)
   });
 

@@ -11,4 +11,16 @@ describe('<GuessSection />', () => {
   it('renders without crashing', () => {
     shallow(<GuessSection />);
   });
-})
+
+  it('renders without crashing', () => {
+    const wrapper = shallow(<GuessSection />);
+    expect(wrapper).toBeDefined();
+  });
+
+  it('renders without crashing', () => {
+    const wrapper = shallow(<GuessSection />);
+    expect(wrapper.find('Feedback', 'GuessForm')).toBeTruthy()
+  });
+
+});
+

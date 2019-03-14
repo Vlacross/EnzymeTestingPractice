@@ -8,16 +8,20 @@ Enzyme.configure({ adapter: new Adapter() });
 import AuralStatus from '../aural-status';
 
 describe('<AuralStatus />', () => {
-  it('renders without crashing', () => {
-    
+
+  it('should renders without crashing', () => {
     shallow(<AuralStatus />);
   });
 
-  it('renders without crashing', () => {
-    
+  it('should renders something', () => {
     const wrapper = shallow(<AuralStatus />);
-    
+    expect(wrapper).toBeDefined();
   });
 
+  it('should renders AuralStatus passed from component props', () => {
+    const mockStatus = 'mockStatus'
+    const wrapper = shallow(<AuralStatus auralStatus={mockStatus}/>);
+    expect(wrapper.props().children).toEqual(mockStatus)
+  });
 
-})
+});

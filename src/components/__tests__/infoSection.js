@@ -11,4 +11,15 @@ describe('<Game />', () => {
   it('renders without crashing', () => {
     shallow(<InfoSection />);
   });
-})
+
+  it('renders without crashing', () => {
+    const wrapper = shallow(<InfoSection />);
+    expect(wrapper).toBeDefined();
+  });
+
+  it('renders 4 elements', () => {
+    const wrapper = shallow(<InfoSection />);
+    expect(wrapper.props().children.length).toEqual(4);
+  });
+
+});
